@@ -23,22 +23,39 @@
  *   node calculator.js sqrt 144       → 12
  */
 
-// Addition (+)
+/**
+ * Compute the sum of two numbers.
+ * @returns {number} The sum of `a` and `b`.
+ */
 function add(a, b) {
   return a + b;
 }
 
-// Subtraction (−)
+/**
+ * Subtracts the second operand from the first.
+ * @returns {number} The difference `a - b`.
+ */
 function subtract(a, b) {
   return a - b;
 }
 
-// Multiplication (×)
+/**
+ * Multiply two numbers.
+ * @param {number} a - The first factor.
+ * @param {number} b - The second factor.
+ * @returns {number} The product of `a` and `b`.
+ */
 function multiply(a, b) {
   return a * b;
 }
 
-// Division (÷) — with division-by-zero handling
+/**
+ * Divide two numbers.
+ * @param {number} a - The dividend.
+ * @param {number} b - The divisor.
+ * @returns {number} The quotient of `a` divided by `b`.
+ * @throws {Error} If `b` is zero.
+ */
 function divide(a, b) {
   if (b === 0) {
     throw new Error("Division by zero is not allowed.");
@@ -46,7 +63,14 @@ function divide(a, b) {
   return a / b;
 }
 
-// Modulo (%) — with division-by-zero handling
+/**
+ * Compute the remainder of dividing the first operand by the second.
+ *
+ * @param {number} a - The dividend.
+ * @param {number} b - The divisor.
+ * @returns {number} The remainder of `a` divided by `b`.
+ * @throws {Error} If `b` is 0. Error message: "Division by zero is not allowed."
+ */
 function modulo(a, b) {
   if (b === 0) {
     throw new Error("Division by zero is not allowed.");
@@ -54,12 +78,22 @@ function modulo(a, b) {
   return a % b;
 }
 
-// Exponentiation (^)
+/**
+ * Raise a numeric base to a given exponent.
+ * @param {number} base - The base value to be raised.
+ * @param {number} exponent - The exponent to apply to the base.
+ * @returns {number} The result of raising `base` to the power of `exponent`.
+ */
 function power(base, exponent) {
   return Math.pow(base, exponent);
 }
 
-// Square root (√) — with negative number handling
+/**
+ * Computes the square root of a non-negative number.
+ * @param {number} n - The number to take the square root of; must be greater than or equal to 0.
+ * @returns {number} The square root of `n`.
+ * @throws {Error} If `n` is less than 0.
+ */
 function squareRoot(n) {
   if (n < 0) {
     throw new Error("Square root of a negative number is not allowed.");
